@@ -47,8 +47,8 @@
     </div>
     <div v-if="transactionPool.length === 0"><span>No transactions in transaction pool</span></div>
     <br>
-    <h5>Mine block</h5>
-    <button v-on:click="mineBlock" class="button-primary">Click to mine block</button>
+    <h5>Mint block</h5>
+    <button v-on:click="mintBlock" class="button-primary">Click to mint block</button>
     <div>
 
     </div>
@@ -98,8 +98,8 @@
             this.init();
           })
       },
-      mineBlock: function() {
-        this.$http.post('/api/mineBlock')
+      mintBlock: function() {
+        this.$http.post('/api/mintBlock')
           .then(() => {
             this.init();
         })
